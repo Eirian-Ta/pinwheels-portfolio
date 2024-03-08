@@ -264,26 +264,14 @@ a {
   }
 }
 
-/* onlcick make smaller */
 .bubbly-button {
   font-family: "Helvetica", "Arial", sans-serif;
   display: inline-block;
   font-size: 1em;
-  /* padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px; */
   -webkit-appearance: none;
   appearance: none;
-  /* background-color: var(--button-bg); */
-  /* color: var(--button-text-color); */
-  /* border-radius: 4px;
-  border: none; */
   cursor: pointer;
-  /* position: relative; */
-  transition:
-    transform ease-in 0.1s,
-    box-shadow ease-in 0.25s;
-  /* box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5); */
+  transition: transform ease-in 0.1s;
 }
 .bubbly-button:focus {
   outline: 0;
@@ -531,3 +519,230 @@ a {
     opacity: 1;
   }
 }
+
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0) scaleY(3);
+    transform: translate3d(0, -50px, 0) scaleY(3);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0) scaleY(0.9);
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0) scaleY(0.95);
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0) scaleY(0.985);
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0) scaleY(3);
+    transform: translate3d(0, -50px, 0) scaleY(3);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0) scaleY(0.9);
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0) scaleY(0.95);
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0) scaleY(0.985);
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0) scaleY(0.985);
+    transform: translate3d(0, -10px, 0) scaleY(0.985);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0) scaleY(0.9);
+    transform: translate3d(0, 20px, 0) scaleY(0.9);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0) scaleY(3);
+    transform: translate3d(0, -50px, 0) scaleY(3);
+  }
+}
+@keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0) scaleY(0.985);
+    transform: translate3d(0, -10px, 0) scaleY(0.985);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0) scaleY(0.9);
+    transform: translate3d(0, 20px, 0) scaleY(0.9);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0) scaleY(3);
+    transform: translate3d(0, -50px, 0) scaleY(3);
+  }
+}
+.animate__bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+
+/* .bounceInDown {
+  animation-name: bounceInDown;
+} */
+
+ul.media-list {
+  /* animation-name: bounceInDown;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1s;
+  animation-fill-mode: both; */
+  /* transition: transform 0.5s ease-in-out;
+  transform: translateY(-100%); */
+
+  /* background-color: #f44336; */
+  /* height: 200px; */
+  /* margin: 0 auto 0 auto; */
+
+  /* width: 200px; */
+}
+
+ul.media-list.visible,
+ul.media-list.invisible {
+  /* animation-name: bounceInDown; */
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  /* transform: translateY(0); */
+  /* animation-duration: 2s; */
+  /* animation-iteration-count: infinite; */
+  /* transform-origin: bottom; */
+}
+
+ul.media-list.visible {
+  animation-name: bounceInDown;
+}
+
+ul.media-list.invisible {
+  animation-name: bounceOutUp;
+  /* animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1s;
+  animation-fill-mode: both; */
+  /* opacity: 0; */
+}
+
+ul.media-list li a {
+  width: 35px;
+  height: 35px;
+  background-color: var(--bg);
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--fg);
+  z-index: 1;
+}
+
+ul.media-list li a .icon {
+  position: relative;
+  transition: 0.5s;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+ul.media-list li a .icon path {
+  fill: var(--fg);
+}
+
+ul.media-list li a:hover .icon {
+  transform: rotateY(360deg);
+}
+
+ul.media-list li a:hover .icon path {
+  fill: var(--bg);
+}
+
+ul.media-list li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+ul.media-list li a:hover:before {
+  top: 0;
+}
+
+ul.media-list li:nth-child(1) a:before {
+  background: #6a329f;
+}
+
+ul.media-list li:nth-child(2) a:before {
+  background: #0077b5;
+}
+
+ul.media-list li:nth-child(3) a:before {
+  background: #2ef27b;
+}
+
+/* https://codepen.io/jcoulterdesign/pen/azQMqG */

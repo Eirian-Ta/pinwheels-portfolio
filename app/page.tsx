@@ -2,10 +2,16 @@
 
 import { useState, useEffect } from "react";
 import TopNav from "./ui/HeadNav/TopNav";
+import {
+  DeviantArtIconLight,
+  GitHubIconLight,
+  LinkedInIconLight,
+} from "./ui/Icons";
 
 export default function Home() {
   const [isBigPinwheelRotating, setBigPinwheelRotating] = useState(true);
   const [isSmallPinwheelRotating, setSmallPinwheelRotating] = useState(true);
+  const [isMediaListVisible, setMediaListVisible] = useState(false);
 
   const stopBigPinwheelRotation = () => {
     setBigPinwheelRotating(!isBigPinwheelRotating);
@@ -13,6 +19,10 @@ export default function Home() {
 
   const stopSmallPinwheelRotation = () => {
     setSmallPinwheelRotating(!isSmallPinwheelRotating);
+  };
+
+  const toggleMediaList = () => {
+    setMediaListVisible(!isMediaListVisible);
   };
 
   useEffect(() => {
@@ -51,7 +61,29 @@ export default function Home() {
       <div className=" flex flex-col items-center justify-center">
         <div className="landing-box">
           <TopNav />
-          <div className="landscape left-cloud"></div>
+          <div className="landscape left-cloud" onClick={toggleMediaList}>
+            <ul
+              className={`media-list flex w-full justify-evenly py-2 absolute bottom-[-60%] ${
+                isMediaListVisible ? "visible" : "invisible"
+              }`}
+            >
+              <li>
+                <a href="https://github.com/Eirian-Ta">
+                  <GitHubIconLight />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/eirian-ta/">
+                  <LinkedInIconLight />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.deviantart.com/white-chan">
+                  <DeviantArtIconLight />
+                </a>
+              </li>
+            </ul>
+          </div>
           <div className="landscape right-cloud"></div>
           <div className="landscape mid-tree bubbly-button"></div>
           <div className="landscape left-tree bubbly-button">
