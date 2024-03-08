@@ -24,10 +24,13 @@ export default function ThemeSelection() {
       {themes.map((t) => (
         <button
           key={t.name}
-          className={`px-4 py-2 ${theme === t.name.toLowerCase() ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"} `}
+          className={`flex items-center space-x-2 p-2 rounded-full ${theme === t.name.toLowerCase() ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"} `}
           onClick={() => setTheme(t.name.toLowerCase())}
         >
-          {t.name}
+          <div
+            className={`theme-circle w-5 h-5 border-solid rounded-full ${theme === t.name.toLowerCase() ? "border-4 border-[#f1f3f9]" : "border-2 border-[#575a5f]"}`}
+          ></div>
+          <p className="m-0">{t.name}</p>
         </button>
       ))}
     </div>

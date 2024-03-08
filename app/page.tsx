@@ -7,6 +7,7 @@ import {
   GitHubIconLight,
   LinkedInIconLight,
 } from "./ui/Icons";
+import styles from "@/app/ui/home.module.css";
 
 export default function Home() {
   const [isBigPinwheelRotating, setBigPinwheelRotating] = useState(true);
@@ -34,14 +35,16 @@ export default function Home() {
       e.preventDefault();
       const parentElement = e.currentTarget;
       if (parentElement) {
-        parentElement.classList.add("animate");
+        parentElement.classList.add(styles.animate);
         setTimeout(() => {
-          parentElement.classList.remove("animate");
+          parentElement.classList.remove(styles.animate);
         }, 700);
       }
     };
 
-    const bubblyButtons = document.querySelectorAll(".bubbly-button");
+    const bubblyButtons = document.querySelectorAll(
+      `.${styles["bubbly-button"]}`
+    );
 
     bubblyButtons.forEach((button) => {
       button.addEventListener("click", handleClick);
@@ -59,11 +62,14 @@ export default function Home() {
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <div className="w-full container mx-auto">
       <div className=" flex flex-col items-center justify-center">
-        <div className="landing-box">
+        <div className={styles.landingBox}>
           <TopNav />
-          <div className="landscape left-cloud" onClick={toggleMediaList}>
+          <div
+            className={`${styles.landscape} ${styles.leftCloud}`}
+            onClick={toggleMediaList}
+          >
             <ul
-              className={`media-list flex w-full justify-evenly py-2 absolute bottom-[-60%] ${
+              className={`mediaList flex w-full justify-evenly py-2 absolute bottom-[-60%] ${
                 isMediaListVisible ? "visible" : "invisible"
               }`}
             >
@@ -84,27 +90,30 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="landscape right-cloud"></div>
-          <div className="landscape mid-tree bubbly-button"></div>
-          <div className="landscape left-tree bubbly-button">
+          <div className={`${styles.landscape} ${styles.rightCloud}`}></div>
+          <div
+            className={`${styles.landscape} ${styles.midTree} ${styles.bubblyButton}`}
+          ></div>
+
+          <div
+            className={`${styles.landscape} ${styles.leftTree} ${styles.bubblyButton}`}
+          >
             <div
-              className={
-                "landscape left-pinwheel " +
-                `${isBigPinwheelRotating ? "slow-rotate" : ""}`
-              }
+              className={`${styles.landscape} ${styles.leftPinwheel} ${isBigPinwheelRotating ? styles.slowRotate : ""}`}
               onClick={stopBigPinwheelRotation}
             ></div>
           </div>
-          <div className="landscape right-tree bubbly-button">
+          <div
+            className={`${styles.landscape} ${styles.rightTree} ${styles.bubblyButton}`}
+          >
             <div
-              className={
-                "landscape left-pinwheel " +
-                `${isSmallPinwheelRotating ? "fast-rotate" : ""}`
-              }
+              className={`${styles.landscape} ${styles.rightPinwheel} ${isSmallPinwheelRotating ? styles.fastRotate : ""}`}
               onClick={stopSmallPinwheelRotation}
             ></div>
           </div>
-          <div className="landscape ground-cloud bubbly-button"></div>
+          <div
+            className={`${styles.landscape} ${styles.groundCloud} ${styles.bubblyButton}`}
+          ></div>
         </div>
       </div>
     </div>
