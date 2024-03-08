@@ -163,6 +163,34 @@ ul.mediaList li a:hover .icon path {
   fill: var(--bg);
 }
 
+.themeSelection button:nth-child(1) div {
+  background: #5b5383;
+}
+
+.themeSelection button:nth-child(2) div {
+  background: #cc8682;
+}
+
+.themeSelection button:nth-child(3) div {
+  background: #01e49c;
+}
+
+.themeSelection button {
+  height: 30px;
+}
+.themeSelection button p {
+  display: none;
+  /* animation-name: bounceOutLeft;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 0.5s; */
+}
+.themeSelection button:hover p {
+  animation-name: bounceInLeft;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 0.5s;
+  display: flex;
+}
+
 @-webkit-keyframes bounceInDown {
   from,
   60%,
@@ -275,5 +303,65 @@ ul.mediaList li a:hover .icon path {
     opacity: 0;
     -webkit-transform: translate3d(0, -50px, 0) scaleY(3);
     transform: translate3d(0, -50px, 0) scaleY(3);
+  }
+}
+
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0) scaleX(3);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0) scaleX(1);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.98);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.995);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0) scaleX(0.9);
+    transform: translate3d(20px, 0, 0) scaleX(0.9);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0) scaleX(2);
+    transform: translate3d(-2000px, 0, 0) scaleX(2);
+  }
+}
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0) scaleX(0.9);
+    transform: translate3d(20px, 0, 0) scaleX(0.9);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0) scaleX(2);
+    transform: translate3d(-2000px, 0, 0) scaleX(2);
   }
 }
