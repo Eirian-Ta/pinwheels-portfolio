@@ -191,6 +191,10 @@ ul.mediaList li a:hover .icon path {
   display: flex;
 }
 
+.menu a:hover p {
+  border-bottom: var(--fg) solid 2px;
+}
+
 @-webkit-keyframes bounceInDown {
   from,
   60%,

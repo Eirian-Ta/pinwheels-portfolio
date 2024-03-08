@@ -24,7 +24,7 @@ export default function ThemeSelection() {
       {themes.map((t) => (
         <button
           key={t.name}
-          className={`flex items-center space-x-2 p-2 rounded-full ${theme === t.name.toLowerCase() ? "bg-gray-500 text-[#f1f3f9]" : "bg-gray-200 text-[#575a5f]"} `}
+          className={`flex items-center space-x-2 p-2 rounded-full opacity-80 ${theme === t.name.toLowerCase() ? "bg-gray-500 text-[#f1f3f9]" : "bg-gray-200 text-[#575a5f]"} `}
           onClick={() => setTheme(t.name.toLowerCase())}
         >
           <div

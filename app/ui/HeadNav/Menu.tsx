@@ -1,15 +1,15 @@
 import Link from "next/link";
 
 const links = [
-  { name: "About", href: "/about", icon: "" },
-  { name: "Projects", href: "/projects", icon: "" },
-  { name: "Experience", href: "/experience", icon: "" },
-  { name: "Contact", href: "/contact", icon: "" },
+  { name: "ABOUT", href: "/about", icon: "" },
+  { name: "PROJECTS", href: "/projects", icon: "" },
+  { name: "EXPERIENCE", href: "/experience", icon: "" },
+  { name: "CONTACT", href: "/contact", icon: "" },
 ];
 
 export default function Menu() {
   return (
-    <div className="flex grow items-center justify-end gap-2 mx-5">
+    <div className="menu flex grow items-center justify-end gap-3 mx-5 font-bold">
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
