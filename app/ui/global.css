@@ -21,7 +21,8 @@
 }
 
 [data-theme="winter-theme"] {
-  --fg: #555;
+  --fg: #575a5f;
+  --bg: #f1f3f9;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Small_tree.png");
@@ -29,11 +30,12 @@
   --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud2.png");
   --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud3.png");
   --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Pinwheel.png");
+  --button-bg: #5b5383;
 }
 
 [data-theme="spring-theme"] {
-  --fg: #129719;
-  --bg: #252799;
+  --fg: #8e7269;
+  --bg: #f3d7cd;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Small_tree.png");
@@ -41,6 +43,7 @@
   --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud2.png");
   --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud3.png");
   --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Pinwheel.png");
+  --button-bg: #cc8682;
 }
 
 * {
@@ -97,8 +100,6 @@ body {
 }
 
 .mid-tree {
-  width: 35vw;
-  height: 35vh;
   background: var(--sub-tree-bg);
   right: 0;
 }
@@ -151,9 +152,10 @@ body {
     width: calc(40vh / 1.14);
     height: 40vh;
   }
-  /* .left-pinwheel {
-        transform: translate(55%, 50%);
-    } */
+  .mid-tree {
+    width: calc(35vw / 1.14);
+    height: 35vh;
+  }
 }
 
 @media (orientation: portrait) {
@@ -164,6 +166,10 @@ body {
   .right-tree {
     width: 22vw;
     height: calc(22vw * 1.14);
+  }
+  .mid-tree {
+    width: 35vw;
+    height: calc(35vw * 1.14);
   }
   /* .left-pinwheel {
         transform: translate(70%, 50%);
@@ -216,8 +222,11 @@ a {
 }
 
 .slow-rotate:hover,
-.fast-rotate:hover {
+.fast-rotate:hover,
+.landscape.left-cloud:hover,
+.landscape.right-cloud:hover {
   animation-play-state: paused;
+  cursor: pointer;
 }
 
 @keyframes rotateAnimation {
@@ -355,16 +364,16 @@ a {
 }
 
 .bubbly-button:active {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }
 
 .bubbly-button.animate:before {
   display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
+  animation: topBubbles ease-in-out 1.75s forwards;
 }
 .bubbly-button.animate:after {
   display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
+  animation: bottomBubbles ease-in-out 1.75s forwards;
 }
 
 @keyframes topBubbles {
@@ -451,4 +460,44 @@ a {
       0% 0%,
       0% 0%;
   }
+}
+
+@keyframes floatLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes floatRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.landscape.left-cloud,
+.landscape.right-cloud {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.landscape.left-cloud {
+  animation-duration: 40s;
+  animation-name: floatLeftToRight;
+}
+
+.landscape.right-cloud {
+  animation-duration: 30s;
+  animation-name: floatRightToLeft;
 }
