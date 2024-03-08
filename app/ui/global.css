@@ -94,9 +94,13 @@ body {
   bottom: 8vh;
 }
 
-.left-tree {
-  background: var(--main-tree-bg);
-  left: 0;
+.left-tree,
+.right-tree,
+.mid-tree {
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-name: growFromBottom;
 }
 
 .mid-tree {
@@ -104,10 +108,17 @@ body {
   right: 0;
 }
 
+.left-tree {
+  background: var(--main-tree-bg);
+  left: 0;
+  animation-delay: 0.5s;
+}
+
 .right-tree {
   display: block;
   background: var(--main-tree-bg);
   right: 0;
+  animation-delay: 1s;
 }
 
 @media (max-width: 800px) {
@@ -117,12 +128,20 @@ body {
   }
 }
 
+.left-cloud,
+.right-cloud {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 .left-cloud {
   width: 180px;
   height: 100px;
   background: var(--cloud-1-bg);
   left: 30%;
   top: 10vh;
+  animation-duration: 40s;
+  animation-name: floatLeftToRight;
 }
 
 .right-cloud {
@@ -131,6 +150,8 @@ body {
   background: var(--cloud-2-bg);
   right: 30%;
   top: 30vh;
+  animation-duration: 30s;
+  animation-name: floatRightToLeft;
 }
 
 .ground-cloud {
@@ -141,6 +162,11 @@ body {
   bottom: 3vh;
   width: 20vw;
   height: 20vw;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-name: slideInFromRight;
+  animation-delay: 2s;
 }
 
 @media (orientation: landscape) {
@@ -486,18 +512,22 @@ a {
   }
 }
 
-.landscape.left-cloud,
-.landscape.right-cloud {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+@keyframes growFromBottom {
+  0% {
+    transform: translateY(100%) scale(0);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
-.landscape.left-cloud {
-  animation-duration: 40s;
-  animation-name: floatLeftToRight;
-}
-
-.landscape.right-cloud {
-  animation-duration: 30s;
-  animation-name: floatRightToLeft;
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
