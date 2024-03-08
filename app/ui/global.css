@@ -84,18 +84,22 @@ a {
 }
 
 ul.mediaList.visible,
-ul.mediaList.invisible {
+ul.mediaList.invisible,
+.resumeContainer.visible,
+.resumeContainer.invisible {
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-ul.mediaList.visible {
+ul.mediaList.visible,
+.resumeContainer.visible {
   animation-name: bounceInDown;
   -webkit-animation-name: bounceInDown;
 }
 
-ul.mediaList.invisible {
+ul.mediaList.invisible,
+.resumeContainer.invisible {
   animation-name: bounceOutUp;
   -webkit-animation-name: bounceOutUp;
 }
@@ -114,6 +118,11 @@ ul.mediaList li a {
   overflow: hidden;
   border: 3px solid var(--fg);
   z-index: 1;
+}
+
+.resumeContainer {
+  height: 35px;
+  text-align: center;
 }
 
 ul.mediaList li a:before {
@@ -151,7 +160,23 @@ ul.mediaList li a .icon {
   height: 100%;
 }
 
-ul.mediaList li a .icon path {
+.resumeContainer .icon {
+  transition: 0.5s;
+  height: 30px;
+  width: auto;
+  margin-left: 5px;
+}
+
+.resumeContainer:hover .icon {
+  transform: scale(1.2);
+}
+
+.resumeContainer:hover {
+  font-size: 18px;
+}
+
+ul.mediaList li a .icon path,
+.resumeContainer .icon path {
   fill: var(--fg);
 }
 

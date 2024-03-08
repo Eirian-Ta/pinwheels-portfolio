@@ -6,6 +6,7 @@ import {
   DeviantArtIconLight,
   GitHubIconLight,
   LinkedInIconLight,
+  ResumeIcon,
 } from "./ui/Icons";
 import styles from "@/app/ui/home.module.css";
 
@@ -13,6 +14,7 @@ export default function Home() {
   const [isBigPinwheelRotating, setBigPinwheelRotating] = useState(true);
   const [isSmallPinwheelRotating, setSmallPinwheelRotating] = useState(true);
   const [isMediaListVisible, setMediaListVisible] = useState(false);
+  const [isResumeVisible, setResumeVisible] = useState(false);
 
   const stopBigPinwheelRotation = () => {
     setBigPinwheelRotating(!isBigPinwheelRotating);
@@ -24,6 +26,10 @@ export default function Home() {
 
   const toggleMediaList = () => {
     setMediaListVisible(!isMediaListVisible);
+  };
+
+  const toggleResume = () => {
+    setResumeVisible(!isResumeVisible);
   };
 
   useEffect(() => {
@@ -43,7 +49,7 @@ export default function Home() {
     };
 
     const bubblyButtons = document.querySelectorAll(
-      `.${styles["bubbly-button"]}`
+      `.${styles["bubblyButton"]}`
     );
 
     bubblyButtons.forEach((button) => {
@@ -90,7 +96,21 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className={`${styles.landscape} ${styles.rightCloud}`}></div>
+          <div
+            className={`${styles.landscape} ${styles.rightCloud}`}
+            onClick={toggleResume}
+          >
+            <a
+              href="https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/Resume_Eirian+Ta_Software.pdf"
+              target="_blank"
+              className={`resumeContainer flex w-full justify-center absolute bottom-[-60%] ${
+                isResumeVisible ? "visible" : "invisible"
+              }`}
+            >
+              Resume
+              <ResumeIcon />
+            </a>
+          </div>
           <div
             className={`${styles.landscape} ${styles.midTree} ${styles.bubblyButton}`}
           ></div>

@@ -163,6 +163,10 @@
   cursor: pointer;
 }
 
+.leftCloud:hover * {
+  z-index: 9999;
+}
+
 @keyframes rotateAnimation {
   from {
     transform: translate(48%, 20%) rotate(0deg);
@@ -172,7 +176,7 @@
   }
 }
 
-.bubbly-button {
+.bubblyButton {
   font-family: "Helvetica", "Arial", sans-serif;
   display: inline-block;
   font-size: 1em;
@@ -182,12 +186,12 @@
   transition: transform ease-in 0.1s;
 }
 
-.bubbly-button:focus {
+.bubblyButton:focus {
   outline: 0;
 }
 
-.bubbly-button:before,
-.bubbly-button:after {
+.bubblyButton:before,
+.bubblyButton:after {
   position: absolute;
   content: "";
   display: block;
@@ -199,7 +203,7 @@
   background-repeat: no-repeat;
 }
 
-.bubbly-button:before {
+.bubblyButton:before {
   display: none;
   top: -75%;
   background-image: radial-gradient(
@@ -247,7 +251,7 @@
     85% 30%;
 }
 
-.bubbly-button:after {
+.bubblyButton:after {
   display: none;
   bottom: -75%;
   background-image: radial-gradient(
@@ -286,15 +290,15 @@
     70% 90%;
 }
 
-.bubbly-button:active {
+.bubblyButton:active {
   transform: scale(0.98);
 }
 
-.bubbly-button.animate:before {
+.bubblyButton.animate:before {
   display: block;
   animation: topBubbles ease-in-out 1.75s forwards;
 }
-.bubbly-button.animate:after {
+.bubblyButton.animate:after {
   display: block;
   animation: bottomBubbles ease-in-out 1.75s forwards;
 }
