@@ -83,6 +83,16 @@ a {
   text-decoration: none;
 }
 
+.topNav .icon {
+  width: 20px;
+  height: auto;
+}
+
+.topNav .icon path {
+  fill: var(--fg);
+  opacity: 0.5;
+}
+
 ul.mediaList.visible,
 ul.mediaList.invisible,
 .resumeContainer.visible,

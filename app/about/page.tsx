@@ -1,3 +1,12 @@
+import TopNav from "../ui/HeadNav/TopNav";
+
 export default function Page() {
-    return <p>About Page</p>;
-  }
+  return (
+    <main>
+      <div>
+        <TopNav />
+        <p>About Page</p>
+      </div>
+    </main>
+  );
+}
