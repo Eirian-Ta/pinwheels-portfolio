@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --fg: #000;
-  --bg: #fff;
-  --view-height: 100vh;
-  --view-width: 100vw;
-  /* --fg: #fff;
-    --bg: #000; */
-  --fuschia: #ff0081;
-  --button-bg: var(--fuschia);
-  --button-text-color: #fff;
-  --baby-blue: #f8faff;
+  --fg: #54585b;
+  --bg: #f1f3f9;
+  --bg2: #dbe0ea;
+  --button-bg: #5b5383;
+  --theme-contrast-colour: #d7ba9d;
+  --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
+  --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
+  --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Small_tree.png");
+  --cloud-1-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud1.png");
+  --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud2.png");
+  --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud3.png");
+  --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Pinwheel.png");
 }
 
 [data-theme="dark"] {
@@ -21,8 +23,11 @@
 }
 
 [data-theme="winter-theme"] {
-  --fg: #575a5f;
+  --fg: #54585b;
   --bg: #f1f3f9;
+  --bg2: #dbe0ea;
+  --button-bg: #5b5383;
+  --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Small_tree.png");
@@ -30,12 +35,12 @@
   --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud2.png");
   --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Cloud3.png");
   --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Pinwheel.png");
-  --button-bg: #5b5383;
 }
 
 [data-theme="spring-theme"] {
   --fg: #8e7269;
   --bg: #f3d7cd;
+  --button-bg: #cc8682;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Small_tree.png");
@@ -43,7 +48,6 @@
   --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud2.png");
   --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud3.png");
   --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Pinwheel.png");
-  --button-bg: #cc8682;
 }
 
 * {
@@ -78,9 +82,22 @@ body {
   text-align: center;
 }
 
+main {
+  width: 90vw;
+  background: var(--bg2);
+  border: 2px solid var(--fg);
+  border-radius: 10px;
+  position: absolute;
+  top: 150px;
+}
+
 a {
   color: var(--fg);
   text-decoration: none;
+}
+
+.topNav {
+  z-index: 9999;
 }
 
 .topNav .icon {

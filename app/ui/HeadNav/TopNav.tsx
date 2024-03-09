@@ -6,7 +6,7 @@ import { HomeIcon } from "../Icons";
 export default function TopNav() {
   return (
     <div className="topNav fixed top-0 left-0 w-screen">
-      <a className="flex justify-center" href="/">
+      <a className="flex justify-center pl-5 md:pl-0 lg:pl-0" href="/">
         <HomeIcon />
         <h1
           className={`m-3 text-2xl opacity-50 ${permanent_marker.className} antialiased`}
@@ -15,7 +15,7 @@ export default function TopNav() {
         </h1>
       </a>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between items-end flex-warp flex-col-reverse md:flex-row lg:flex-row md:flex-start lg:flex-start md:items-start lg:items-start">
         <ThemeSelection />
         <Menu />
       </div>
