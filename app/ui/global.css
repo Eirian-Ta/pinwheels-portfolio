@@ -7,6 +7,7 @@
   --bg: #f1f3f9;
   --bg2: #dbe0ea;
   --button-bg: #5b5383;
+  --button-fg: #f1f3f9;
   --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
@@ -27,6 +28,7 @@
   --bg: #f1f3f9;
   --bg2: #dbe0ea;
   --button-bg: #5b5383;
+  --button-fg: #f1f3f9;
   --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
@@ -41,6 +43,7 @@
   --fg: #8e7269;
   --bg: #f3d7cd;
   --button-bg: #cc8682;
+  --button-fg: #f1f3f9;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Small_tree.png");
@@ -84,11 +87,33 @@ body {
 
 main {
   width: 90vw;
-  background: var(--bg2);
-  border: 2px solid var(--fg);
+  /* background: var(--bg2); */
+  /* border: 2px solid var(--fg); */
   border-radius: 10px;
-  position: absolute;
-  top: 150px;
+  /* position: absolute; */
+  /* top: 150px; */
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  /* box-shadow:
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12); */
+  box-shadow:
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+main section {
+  border-radius: 10px;
+  box-shadow:
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+button {
+  color: var(--button-fg);
+  background: var(--button-bg) !important;
 }
 
 a {
@@ -100,23 +125,38 @@ a {
   z-index: 9999;
 }
 
-.topNav .icon {
+.icon {
   width: 20px;
   height: auto;
 }
 
-.topNav .icon path {
+.icon path {
   fill: var(--fg);
-  opacity: 0.5;
 }
 
 ul.mediaList.visible,
 ul.mediaList.invisible,
 .resumeContainer.visible,
-.resumeContainer.invisible {
+.resumeContainer.invisible,
+.profileImageContainer img.visible,
+.profileImageContainer img.invisible {
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 1s;
   animation-fill-mode: both;
+}
+
+.profileImageContainer img.visible,
+.profileImageContainer img.invisible {
+  visibility: unset;
+}
+
+.profileImageContainer img.visible {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+}
+.profileImageContainer img.invisible {
+  animation-name: fadeOut;
+  -webkit-animation-name: fadeOut;
 }
 
 ul.mediaList.visible,
@@ -245,6 +285,17 @@ ul.mediaList li a:hover .icon path {
 
 .menu a:hover p {
   border-bottom: var(--fg) solid 2px;
+}
+
+.contactTextContainer .icon {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.footer {
+  border-top: 1px solid var(--fg) !important;
+  padding-top: 10px;
+  margin-top: 80px;
 }
 
 @-webkit-keyframes bounceInDown {
@@ -419,5 +470,25 @@ ul.mediaList li a:hover .icon path {
     opacity: 0;
     -webkit-transform: translate3d(-100px, 0, 0) scaleX(2);
     transform: translate3d(-2000px, 0, 0) scaleX(2);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }

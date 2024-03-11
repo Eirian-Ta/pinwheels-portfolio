@@ -6,10 +6,13 @@ import { HomeIcon } from "../Icons";
 export default function TopNav() {
   return (
     <div className="topNav fixed top-0 left-0 w-screen">
-      <a className="flex justify-center pl-5 md:pl-0 lg:pl-0" href="/">
+      <a
+        className="flex justify-center pl-5 md:pl-0 lg:pl-0 opacity-50"
+        href="/"
+      >
         <HomeIcon />
         <h1
-          className={`m-3 text-2xl opacity-50 ${permanent_marker.className} antialiased`}
+          className={`m-3 text-2xl ${permanent_marker.className} antialiased`}
         >
           Eirian Ta * Full-stack Developer
         </h1>
