@@ -2,12 +2,7 @@
 
 import { useState, useEffect } from "react";
 import TopNav from "./ui/HeadNav/TopNav";
-import {
-  DeviantArtIconLight,
-  GitHubIconLight,
-  LinkedInIconLight,
-  ResumeIcon,
-} from "./ui/Icons";
+import { socialLinks, resumeData } from "./lib/placeholder-data";
 import styles from "@/app/ui/home.module.css";
 
 export default function Home() {
@@ -79,21 +74,11 @@ export default function Home() {
                 isMediaListVisible ? "visible" : "invisible"
               }`}
             >
-              <li>
-                <a href="https://github.com/Eirian-Ta">
-                  <GitHubIconLight />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/eirian-ta/">
-                  <LinkedInIconLight />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.deviantart.com/white-chan">
-                  <DeviantArtIconLight />
-                </a>
-              </li>
+              {socialLinks.map((l) => (
+                <li key={l.name}>
+                  <a href={l.url}>{l.icon}</a>
+                </li>
+              ))}
             </ul>
           </div>
           <div
@@ -101,14 +86,14 @@ export default function Home() {
             onClick={toggleResume}
           >
             <a
-              href="https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/Resume_Eirian+Ta_Software.pdf"
+              href={resumeData.url}
               target="_blank"
               className={`resumeContainer flex w-full justify-center absolute bottom-[-60%] ${
                 isResumeVisible ? "visible" : "invisible"
               }`}
             >
-              Resume
-              <ResumeIcon />
+              {resumeData.text}
+              {resumeData.icon}
             </a>
           </div>
           <div

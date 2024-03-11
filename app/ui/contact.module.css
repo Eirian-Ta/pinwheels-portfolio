@@ -3,10 +3,6 @@
   width: 100vw;
 }
 
-.contactTextContainer .icon {
-  margin-right: 5px;
-}
-
 /* Medium screens (md) */
 @media (min-width: 768px) {
   .contactTextContainer {
