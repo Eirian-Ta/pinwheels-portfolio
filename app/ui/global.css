@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 :root {
+  --purple: #5b5383;
+  --pink: #cc8682;
+  --green: #0077b5;
+  --orange: #cf6015;
   --fg: #54585b;
   --bg: #f1f3f9;
   --bg2: #dbe0ea;
-  --button-bg: #5b5383;
+  --button-bg: var(--purple);
   --button-fg: #f1f3f9;
   --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
@@ -27,7 +31,7 @@
   --fg: #54585b;
   --bg: #f1f3f9;
   --bg2: #dbe0ea;
-  --button-bg: #5b5383;
+  --button-bg: var(--purple);
   --button-fg: #f1f3f9;
   --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg_blank_resized.jpg");
@@ -42,7 +46,36 @@
 [data-theme="spring-theme"] {
   --fg: #8e7269;
   --bg: #f3d7cd;
-  --button-bg: #cc8682;
+  --bg2: #f1cbbd;
+  --button-bg: var(--pink);
+  --button-fg: #f1f3f9;
+  --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg_blank_resized.jpg");
+  --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
+  --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Small_tree.png");
+  --cloud-1-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud1.png");
+  --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud2.png");
+  --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud3.png");
+  --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Pinwheel.png");
+}
+
+[data-theme="summer-theme"] {
+  --fg: #8e7269;
+  --bg: #f3d7cd;
+  --button-bg: var(--green);
+  --button-fg: #f1f3f9;
+  --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg_blank_resized.jpg");
+  --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
+  --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Small_tree.png");
+  --cloud-1-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud1.png");
+  --cloud-2-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud2.png");
+  --cloud-3-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Cloud3.png");
+  --pinwheel-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Pinwheel.png");
+}
+
+[data-theme="autumn-theme"] {
+  --fg: #8e7269;
+  --bg: #f3d7cd;
+  --button-bg: var(--orange);
   --button-fg: #f1f3f9;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg_blank_resized.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
@@ -256,15 +289,22 @@ ul.mediaList li a:hover .icon path {
 }
 
 .themeSelection button:nth-child(1) div {
-  background: #5b5383;
+  color: var(--bg2);
+}
+.themeSelection button:nth-child(1) div {
+  background: var(--purple);
 }
 
 .themeSelection button:nth-child(2) div {
-  background: #cc8682;
+  background: var(--pink);
 }
 
 .themeSelection button:nth-child(3) div {
-  background: #01e49c;
+  background: var(--green);
+}
+
+.themeSelection button:nth-child(4) div {
+  background: var(--orange);
 }
 
 .themeSelection button {
