@@ -1,6 +1,4 @@
 import TopNav from "../ui/HeadNav/TopNav";
-import { permanent_marker } from "../ui/fonts";
-import styles from "@/app/ui/experience.module.css";
 import Footer from "../ui/Footer/Footer";
 import ExperienceCard from "../ui/Experience/ExperienceCard";
 import { experienceData } from "../lib/placeholder-data";
@@ -13,9 +11,10 @@ export default function Page() {
       </header>
       <div>
         <main className="flex flex-col items-center">
-          <p className="m-8 p-5">
-            While I officially graduated from Seneca in December 2022, my
-            journey in building real-world projects commenced in 2018. 🚀
+          <p className="text-xl m-8 p-5">
+            While I officially <u>graduated</u> from Seneca in December{" "}
+            <b>2022</b>, my journey in building <u>real-world</u> projects{" "}
+            <u>commenced</u> in <b>2018</b>. 🚀
           </p>
           {experienceData.map((item, index) => (
             <ExperienceCard

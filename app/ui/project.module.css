@@ -1,0 +1,51 @@
+.projectsContainer {
+}
+
+.projectCard {
+  border-radius: 10px;
+  box-shadow:
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.projectCard:hover {
+  background: var(--bg2);
+  box-shadow:
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.projectCard p {
+  margin: 5px 0px;
+}
+.projectCard img {
+  margin: 10px 0px;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+.tagGroup {
+  border: 1px black dashed;
+  border-radius: 10px;
+}
+
+.tag {
+  background: var(--button-bg);
+  color: var(--button-fg);
+  cursor: pointer;
+}
+
+.tag:hover {
+  box-shadow:
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.chosenTag {
+  border: 1px solid var(--button-bg);
+  color: var(--button-bg);
+  background: var(--button-fg);
+  box-shadow:
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}

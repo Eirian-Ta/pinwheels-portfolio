@@ -2,23 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "@/app/ui/experience.module.css";
-
-interface ContentItem {
-  key: string;
-  achieve: string;
-}
-
-interface ExperienceCardProps {
-  employer: string;
-  employerLogoUrl: string;
-  title: string;
-  time: string;
-  year: number;
-  content: ContentItem[];
-  stack: string;
-  schoolItem: boolean;
-  lastItem: boolean;
-}
+import { ExperienceCardProps } from "@/app/lib/interfaces";
 
 const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
   const {
