@@ -16,10 +16,8 @@ export interface ExperienceCardProps {
 }
 
 interface URLItem {
-  key: string;
   type: string;
-  demo: string;
-  githubCode: string;
+  url: string;
 }
 
 export interface ProjectCardProps {
@@ -30,4 +28,9 @@ export interface ProjectCardProps {
   tags: string[];
   desc: string;
   urls: URLItem[];
+}
+
+export interface ShowMoreBtnProps {
+  isShowingMore: boolean;
+  setIsShowingMore: React.Dispatch<React.SetStateAction<boolean>>;
 }

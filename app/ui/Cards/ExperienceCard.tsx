@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "@/app/ui/experience.module.css";
 import { ExperienceCardProps } from "@/app/lib/interfaces";
+import ShowMoreBtn from "./ShowMoreBtn";
 
 const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
   const {
@@ -17,11 +18,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
     schoolItem,
   } = props;
 
-  const [isShowingMore, setIsShowingMore] = useState(false);
-
-  const toggleShowingMore = () => {
-    setIsShowingMore(!isShowingMore);
-  };
+  const [isShowingMore, setIsShowingMore] = useState<boolean>(false);
 
   return (
     <section
@@ -41,11 +38,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
         </ul>
       </div>
       {!schoolItem && (
-        <button className={`${styles.showMoreBtn}`} onClick={toggleShowingMore}>
-          <i
-            className={`${styles.arrowIcon} ${isShowingMore ? styles.up : styles.down}`}
-          ></i>
-        </button>
+        <ShowMoreBtn
+          isShowingMore={isShowingMore}
+          setIsShowingMore={setIsShowingMore}
+        />
       )}
 
       <div

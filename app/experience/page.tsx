@@ -1,6 +1,6 @@
 import TopNav from "../ui/HeadNav/TopNav";
 import Footer from "../ui/Footer/Footer";
-import ExperienceCard from "../ui/Experience/ExperienceCard";
+import ExperienceCard from "../ui/Cards/ExperienceCard";
 import { experienceData } from "../lib/placeholder-data";
 
 export default function Page() {

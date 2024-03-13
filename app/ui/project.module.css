@@ -32,13 +32,17 @@
 .tag {
   background: var(--button-bg);
   color: var(--button-fg);
-  cursor: pointer;
+  /* font-size: 0.6rem; */
 }
 
-.tag:hover {
+.tagGroup .tag:hover {
+  color: var(--button-bg);
+  background: var(--button-fg);
   box-shadow:
     inset -10px -10px 15px rgba(255, 255, 255, 0.5),
     inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+  /* transform: scale(1.2); */
+  cursor: pointer;
 }
 
 .chosenTag {

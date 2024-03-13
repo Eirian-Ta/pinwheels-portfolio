@@ -4,7 +4,7 @@ import TopNav from "../ui/HeadNav/TopNav";
 import { permanent_marker } from "../ui/fonts";
 import styles from "@/app/ui/project.module.css";
 import Footer from "../ui/Footer/Footer";
-import ProjectCard from "../ui/Projects/ProjectCard";
+import ProjectCard from "../ui/Cards/ProjectCard";
 import {
   tagsByGroup,
   realWorldProjectsData,
@@ -44,9 +44,6 @@ export default function Page() {
   };
 
   const filterByTags = (projects: ProjectCardProps[], filter: string[]) => {
-    console.log("filterByTags");
-    console.log(projects);
-    console.log(filter);
     return projects.reduce(
       (accumulator: ProjectCardProps[], currentProj: ProjectCardProps) => {
         const tagSet = new Set(currentProj.tags);
@@ -95,7 +92,7 @@ export default function Page() {
               >
                 Others
               </h2>
-              <p>
+              <p className="mb-5">
                 Behold, a treasure trove of my personal and school projects!
                 While some of the code might be a tad antiquated, dive in for a
                 peek into what used to occupy my creative endeavors.
@@ -123,7 +120,7 @@ export default function Page() {
                         className={`${styles.tag} ${filter.includes(tag ?? "") ? styles.chosenTag : ""} rounded-full px-3 py-1 text-xs font-semibold mx-1 my-1`}
                         onClick={() => handleFiltering(tag ?? "")}
                       >
-                        {tag?.toUpperCase()}
+                        {tag?.charAt(0).toUpperCase() + tag.slice(1)}
                       </div>
                     ))}
                   </div>

@@ -332,6 +332,39 @@ ul.mediaList li a:hover .icon path {
   margin-left: 10px;
 }
 
+.showMoreBtn {
+  /* background: none !important; */
+  background: var(--button-bg);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.8;
+}
+
+.arrowIcon {
+  border: solid var(--bg);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrowUp {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform-origin: center center;
+  transition: all ease-in-out 0.5s;
+}
+
+.arrowDown {
+  transform: rotate(45deg) translate(-40%, -40%);
+  -webkit-transform: rotate(45deg) translate(-40%, -40%);
+  transform-origin: center center;
+  transition: all ease-in-out 0.5s;
+}
+
 .footer {
   border-top: 1px solid var(--fg) !important;
   padding-top: 10px;
