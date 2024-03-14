@@ -51,7 +51,7 @@
 
 .rightPinwheel {
   display: block;
-  width: 60%;
+  aspect-ratio: 1;
   height: 60%;
   background: var(--pinwheel-bg);
   top: 0;
