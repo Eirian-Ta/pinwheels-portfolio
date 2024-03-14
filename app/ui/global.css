@@ -145,8 +145,14 @@ main section {
 }
 
 button {
+  width: 120px;
   color: var(--button-fg);
   background: var(--button-bg) !important;
+}
+
+.btnStyle2 {
+  background: var(--button-fg) !important;
+  color: var(--button-bg) !important;
 }
 
 a {
@@ -165,6 +171,17 @@ a {
 
 .icon path {
   fill: var(--fg);
+}
+
+.actionBox {
+  z-index: 999999;
+}
+
+.actionBox .icon {
+  width: 40px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 ul.mediaList.visible,
