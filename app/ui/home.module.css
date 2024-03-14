@@ -113,7 +113,7 @@
   height: 100px;
   background: var(--cloud-1-bg);
   left: 30%;
-  top: 10vh;
+  top: 14vh;
   animation-duration: 40s;
   animation-name: floatLeftToRight;
 }
