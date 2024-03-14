@@ -221,7 +221,7 @@ export const experienceData = [
       },
       {
         key: "seneca2",
-        achieve: "President’s Honour List (all semesters)",
+        achieve: "President’s Honour List",
       },
     ],
     stack: "",
