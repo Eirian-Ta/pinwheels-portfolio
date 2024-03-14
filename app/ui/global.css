@@ -185,7 +185,7 @@ a {
   height: auto;
 }
 
-.icon path {
+.icon path:first-child {
   fill: var(--fg);
 }
 
@@ -319,6 +319,24 @@ ul.mediaList li a:hover .icon {
 
 ul.mediaList li a:hover .icon path {
   fill: var(--bg);
+}
+
+.backToTopBtn {
+  position: fixed;
+  top: 85%;
+  left: 0;
+  width: fit-content;
+  opacity: 0.3;
+  border-radius: 0 10px 10px 0;
+}
+
+.backToTopBtn .icon {
+  width: 2.5rem;
+  /* opacity: 0.05; */
+}
+
+.backToTopBtn .icon path:first-child {
+  fill: none;
 }
 
 .topNav .showMoreBtn {

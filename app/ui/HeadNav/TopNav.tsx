@@ -2,6 +2,7 @@ import Menu from "./Menu";
 import ThemeSelection from "./ThemeSelection";
 import { permanent_marker } from "../fonts";
 import { HomeIcon } from "../Icons";
+import BackToTopBtn from "./BackToTopBtn";
 
 export default function TopNav() {
   return (
@@ -22,6 +23,8 @@ export default function TopNav() {
         <ThemeSelection />
         <Menu />
       </div>
+
+      <BackToTopBtn />
     </div>
   );
 }
