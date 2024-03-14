@@ -18,7 +18,7 @@ export default function TopNav() {
         </h1>
       </a>
 
-      <div className="flex justify-between items-end flex-warp flex-col-reverse md:flex-row lg:flex-row md:flex-start lg:flex-start md:items-start lg:items-start">
+      <div className="flex justify-between items-end flex-warp flex-col-reverse mr-1 md:flex-row lg:flex-row md:flex-start lg:flex-start md:items-start lg:items-start">
         <ThemeSelection />
         <Menu />
       </div>

@@ -321,6 +321,12 @@ ul.mediaList li a:hover .icon path {
   fill: var(--bg);
 }
 
+.topNav .showMoreBtn {
+  width: 30px;
+  position: unset;
+  margin: 0.5rem 1.25rem;
+}
+
 .themeSelection button:nth-child(1) div {
   color: var(--bg2);
 }
@@ -357,6 +363,13 @@ ul.mediaList li a:hover .icon path {
     animation-name: bounceInLeft;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     animation-duration: 0.5s;
+    display: flex;
+  }
+  .topNav .showMoreBtn {
+    display: none;
+  }
+
+  .themeSelection {
     display: flex;
   }
 }
