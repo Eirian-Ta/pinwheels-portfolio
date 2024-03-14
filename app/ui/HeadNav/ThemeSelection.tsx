@@ -24,13 +24,13 @@ export default function ThemeSelection() {
       {themes.map((t) => (
         <button
           key={t.name}
-          className={`flex items-center space-x-2 p-2 rounded-full opacity-80 ${theme === t.name.toLowerCase() ? "bg-gray-500 text-[#f1f3f9]" : "bg-gray-200 text-[#575a5f]"} `}
+          className={`flex flex-row-reverse md:flex-row items-center md:space-x-2 p-2 rounded-full opacity-80 ${theme === t.name.toLowerCase() ? "bg-gray-500 text-[#f1f3f9]" : "bg-gray-200 text-[#575a5f]"} `}
           onClick={() => setTheme(t.name.toLowerCase())}
         >
           <div
-            className={`w-5 h-5 border-solid rounded-full ${theme === t.name.toLowerCase() ? "border-4 border-[#f1f3f9]" : "border-2 border-[#575a5f]"}`}
+            className={`w-5 h-5 border-solid rounded-full ${theme === t.name.toLowerCase() ? "border-4 border-[#f1f3f9]" : "border-2 border-[#33312e]"}`}
           ></div>
-          <p className="m-0">{t.name}</p>
+          <p className="mr-2 md:m-0">{t.name}</p>
         </button>
       ))}
     </div>

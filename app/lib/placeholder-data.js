@@ -30,7 +30,7 @@ export const aboutData = {
   vitae, condimentum malesuada metus. Praesent vel lobortis neque.
   Aliquam in ullamcorper augue. Curabitur placerat condimentum
   vehicula. Etiam fermentum auctor ullamcorper.`,
-  techStackTitle: "My Tech Stack",
+  techStackTitle: "Technical Skills",
   techStack: [
     {
       key: "languagesFramework",

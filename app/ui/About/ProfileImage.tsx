@@ -14,6 +14,7 @@ export default function ProfileImage() {
   };
 
   const showRealPhotoAfterTime = () => {
+    setIsFirstTimeRendered(false);
     setIsRealPhotoShown(true);
   };
 
