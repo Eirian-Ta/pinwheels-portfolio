@@ -3,7 +3,7 @@ import { allSocialContactLinks } from "@/app/lib/placeholder-data";
 
 export default function Footer() {
   return (
-    <div className="footer flex flex-wrap justify-center items-center">
+    <div className="footer flex flex-wrap justify-center items-center py-5">
       <div className="m-3">
         <p>&copy; Developed by Eirian Ta. All Rights Reserved.</p>
       </div>
