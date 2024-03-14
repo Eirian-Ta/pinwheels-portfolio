@@ -24,32 +24,33 @@ export default function Page() {
                 {aboutData.aboutTitle}
               </h2>
               <p className="my-3">
-                I'm a <span className="highlight"> Full-Stack Developer</span>{" "}
-                with over 4 years of experience. While I can handle <b>Java</b>,{" "}
+                I&apos;m a{" "}
+                <span className="highlight"> Full-Stack Developer</span> with
+                over 4 years of experience. While I can handle <b>Java</b>,{" "}
                 <b>Python</b>, and <b>C#</b>, my heart truly belongs to{" "}
                 <b>JavaScript</b> and <b>TypeScript</b>. Paired with frameworks
-                like <b>React</b> and <b>Angular</b>, they've been my go-to
+                like <b>React</b> and <b>Angular</b>, they&apos;ve been my go-to
                 tools for crafting elegant solutions and bringing ideas to life.
               </p>
               <p className="my-3">
                 My journey has also led me into the realm of{" "}
-                <span className="highlight ">DevOps</span>, where I've had a
-                hand in developing and maintaining an internal system at{" "}
+                <span className="highlight ">DevOps</span>, where I&apos;ve had
+                a hand in developing and maintaining an internal system at{" "}
                 <b>RBC</b>, managing <u>12,000 apps</u> with 30-40 new apps
-                onboarded every day. On the side, I've also delved into{" "}
+                onboarded every day. On the side, I&apos;ve also delved into{" "}
                 <span className="highlight">Mobile Development</span> with{" "}
                 <b>React Native, Objective-C, Swift</b>; and assisted clients in
                 setting up e-commerce websites on platforms like{" "}
                 <b>WordPress</b>, <b>Shopify</b>, and <b>BigCommerce</b>.
               </p>
               <p className="my-3">
-                To me, coding isn't just a job — it's a passion. The thrill of
-                solving problems and learning something new every day keeps me
-                going. Even when things don't go as planned, I see it as an
-                opportunity to discover something new.⛅
+                To me, coding isn&apos;t just a job — it&apos;s a passion. The
+                thrill of solving problems and learning something new every day
+                keeps me going. Even when things don&apos;t go as planned, I see
+                it as an opportunity to discover something new.⛅
               </p>
               <p className="my-3 text-sm">
-                P/S: I hope you're enjoying my{" "}
+                P/S: I hope you&apos;re enjoying my{" "}
                 <span
                   className={`text-base ${permanent_marker.className} antialiased`}
                 >
@@ -60,11 +61,11 @@ export default function Page() {
                 <a className="underline highlight" href="/">
                   homepage
                 </a>{" "}
-                yet? Give it a whirl, and don't forget to try out the four
-                seasons themes too. "Winter" is the default because, well, I'm
-                living in Canada — long winters are our specialty! But hey,
-                choose the theme that tickles your fancy the most! 🌟 Enjoy the
-                whimsical journey!
+                yet? Give it a whirl, and don&apos;t forget to try out the four
+                seasons themes too. &quot;Winter&quot; is the default because,
+                well, I&apos;m living in Canada — long winters are our
+                specialty! But hey, choose the theme that tickles your fancy the
+                most! 🌟 Enjoy the whimsical journey!
               </p>
             </div>
           </section>
