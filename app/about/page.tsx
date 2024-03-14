@@ -14,7 +14,7 @@ export default function Page() {
       <div>
         <main>
           <section
-            className={`${styles.descriptionContainer} flex justify-evenly flex-wrap m-8 p-5`}
+            className={`${styles.descriptionContainer} flex justify-evenly flex-wrap m-3 p-2 md:m-8 md:p-5`}
           >
             <ProfileImage />
             <div className={`${styles.description} p-5 text-left`}>

@@ -15,7 +15,7 @@ export default function Page() {
       <div>
         <main className="flex flex-wrap justify-between">
           <section
-            className={`${styles.contactTextContainer} contactTextContainer m-5 p-2 md:m-8 md:p-5`}
+            className={`${styles.contactTextContainer} contactTextContainer m-3 p-2 md:m-8 md:p-5`}
           >
             <h2
               className={`m-3 text-3xl ${permanent_marker.className} antialiased`}
@@ -37,7 +37,7 @@ export default function Page() {
               </li>
             </ul>
           </section>
-          <section className={`${styles.formContainer} m-5 p-2 md:m-8 p-5`}>
+          <section className={`${styles.formContainer} m-3 p-2 md:m-8 p-5`}>
             <ContactFrom />
           </section>
         </main>

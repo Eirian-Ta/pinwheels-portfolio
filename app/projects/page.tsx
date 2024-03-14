@@ -74,7 +74,7 @@ export default function Page() {
       <div>
         <main className="flex flex-col-reverse justify-between md:flex-row">
           <div className={`${styles.projectsContainer} w-full md:w-4/5`}>
-            <section className="m-5 p-2 md:ml-8 my-8 p-5">
+            <section className="m-3 p-2 md:ml-8 md:my-8 md:p-5">
               <h2
                 className={`m-3 text-3xl ${permanent_marker.className} antialiased`}
               >
@@ -104,7 +104,7 @@ export default function Page() {
               </div>
             </section>
           </div>
-          <section className="w-100 m-5 p-2 md:w-1/6 md: my-8 mr-8 p-5">
+          <section className="w-100 m-3 p-2 md:w-1/6 md:my-8 md:mr-8 md:p-5">
             <p className="font-bold text-lg">Filter by Tags:</p>
             <div>
               {tagsByGroup.map((tagGroup, index) => (
