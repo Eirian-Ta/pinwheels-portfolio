@@ -20,7 +20,7 @@ export default function ThemeSelection() {
   if (!mounted) return null;
 
   return (
-    <div className="themeSelection flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0 mx-5">
+    <div className="themeSelection flex flex-col space-y-4 my-2 md:my-0 lg:flex-row lg:space-x-4 lg:space-y-0 mx-5">
       {themes.map((t) => (
         <button
           key={t.name}

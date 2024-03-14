@@ -5,7 +5,7 @@ import { HomeIcon } from "../Icons";
 
 export default function TopNav() {
   return (
-    <div className="topNav fixed top-0 left-0 w-screen">
+    <div className="topNav absolute top-0 left-0 w-screen">
       <a
         className="flex justify-center pl-5 md:pl-0 lg:pl-0 opacity-50"
         href="/"
