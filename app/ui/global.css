@@ -11,8 +11,8 @@
   --bg: #f1f3f9;
   --bg2: #dbe0ea;
   --button-bg: var(--purple);
+  --highlight: #221a4d;
   --button-fg: #f1f3f9;
-  --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Small_tree.png");
@@ -32,8 +32,8 @@
   --bg: #f1f3f9;
   --bg2: #ebeffc;
   --button-bg: var(--purple);
+  --highlight: #221a4d;
   --button-fg: #f1f3f9;
-  --theme-contrast-colour: #d7ba9d;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Bg.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Big_tree.png");
   --sub-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/01_Small_tree.png");
@@ -48,6 +48,7 @@
   --bg: #f3d7cd;
   --bg2: #f1cbbd;
   --button-bg: var(--pink);
+  --highlight: #ca3f37;
   --button-fg: #f1f3f9;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Bg.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/02_Big_tree.png");
@@ -63,6 +64,7 @@
   --bg: #fee7db;
   --bg2: #fdd8bd;
   --button-bg: var(--green);
+  --highlight: #fda363;
   --button-fg: #fff3e7;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/03_Bg.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/03_Big_tree.png");
@@ -78,6 +80,7 @@
   --bg: #f8c59f;
   --bg2: #db9465;
   --button-bg: var(--blue);
+  --highlight: #bd6023;
   --button-fg: #eae2ec;
   --landing-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/04_Bg.jpg");
   --main-tree-bg: url("https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/assets/04_Big_tree.png");
@@ -160,6 +163,12 @@ button {
 .btnStyle2 {
   background: var(--button-fg) !important;
   color: var(--button-bg) !important;
+}
+
+.highlight {
+  background: linear-gradient(to left, var(--highlight), var(--button-bg));
+  color: var(--button-fg);
+  font-weight: 500;
 }
 
 a {

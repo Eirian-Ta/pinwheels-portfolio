@@ -18,18 +18,6 @@ export const aboutData = {
   avatarCartoonUrl: "",
   avatarUrl: "",
   aboutTitle: "Hey! I'm Eirian",
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-  scelerisque quam eu massa tincidunt fringilla. Mauris vitae nunc
-  eros. Curabitur nec ex aliquam, blandit ante et, venenatis
-  tortor. Pellentesque quis lobortis nisl, eu semper nisl. Ut in
-  lacinia metus. Phasellus interdum blandit ornare. Sed blandit,
-  nisl vitae consectetur molestie, quam velit commodo arcu, non
-  mattis felis mi facilisis metus. Ut lectus mi, gravida at
-  fringilla ac, tempor sit amet elit. Phasellus placerat diam eget
-  nulla lacinia feugiat. Vestibulum velit ligula, congue id erat
-  vitae, condimentum malesuada metus. Praesent vel lobortis neque.
-  Aliquam in ullamcorper augue. Curabitur placerat condimentum
-  vehicula. Etiam fermentum auctor ullamcorper.`,
   techStackTitle: "Technical Skills",
   techStack: [
     {
