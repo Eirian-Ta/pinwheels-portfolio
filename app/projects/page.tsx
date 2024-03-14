@@ -120,7 +120,9 @@ export default function Page() {
                         className={`${styles.tag} ${filter.includes(tag ?? "") ? styles.chosenTag : ""} rounded-full px-3 py-1 text-xs font-semibold mx-1 my-1`}
                         onClick={() => handleFiltering(tag ?? "")}
                       >
-                        {tag?.charAt(0).toUpperCase() + tag.slice(1)}
+                        {tag !== undefined
+                          ? tag.charAt(0).toUpperCase() + tag.slice(1)
+                          : ""}
                       </div>
                     ))}
                   </div>
