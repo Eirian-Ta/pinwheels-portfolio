@@ -329,12 +329,14 @@ export const realWorldProjectsData = [
     thumbnailFormat: "jpg",
     tags: [
       "mobile-app",
+      "android",
+      "ios",
       "aws",
       "aws-ecs",
       "aws-s3",
       "aws-code-pipeline",
       "mongoDB",
-      "reactNative",
+      "react-native",
       "redux",
       "node.js",
       "javascript",
@@ -441,12 +443,13 @@ export const realWorldProjectsData = [
     thumbnailFormat: "gif",
     tags: [
       "mobile-app",
+      "ios",
       "aws",
       "aws-s3",
       "graphQL",
       "postgreSQL",
       "apollo",
-      "reactNative",
+      "react-native",
       "node.js",
       "javascript",
     ],
@@ -458,7 +461,7 @@ export const realWorldProjectsData = [
     title: "Planned Parenthood Toronto Website",
     company: "Planned Parenthood Toronto",
     thumbnailFormat: "jpg",
-    tags: ["website", "wordpress", "php"],
+    tags: ["website", "wordpress", "pHP"],
     desc: "As a contractor for Planned Parenthood Toronto, I collaborated on developing a demonstration version for their website in 2018. The successful client approval led to securing sponsorship, transforming our demonstration into a fully functional website in 2019.",
     urls: [
       {
@@ -528,18 +531,99 @@ export const otherProjectsData = [
       },
     ],
   },
+  {
+    appCode: "pokemonM",
+    title: "Pokemon Android App",
+    tags: ["mobile-app", "android", "java"],
+    thumbnailFormat: "jpg",
+    desc: "The Android app is designed for Pokémon management, strictly adhering to specific guidelines. It employs the Singleton pattern to handle Pokémon data consistently across the application. View bindings are exclusively used, eliminating the need for data bindings or findViewById(). The ListView integrates a custom adapter extending ArrayAdapter, enabling efficient updates to each row's content within the adapter's getView() function.",
+    urls: [
+      {
+        type: "demo-clip",
+        url: "https://youtu.be/XcZULABXS6Q",
+      },
+      {
+        type: "code",
+        url: "https://github.com/Eirian-Ta/pokemon",
+      },
+    ],
+  },
+  {
+    appCode: "movieM",
+    title: "Purchase Movie Ticket",
+    tags: ["mobile-app", "android", "java", "room", "retrofit"],
+    thumbnailFormat: "jpg",
+    desc: "The Android app facilitates browsing and purchasing movie tickets, employing Fragments for screen creation. Navigation and data exchange between screens are managed via the Navigation Component library and nav_graph. Data persistence is ensured through the Room database, while API interactions are handled using the Retrofit client with GSON parser. Images are downloaded and displayed using the Glide library, enhancing the user experience.",
+    urls: [
+      {
+        type: "demo-clip",
+        url: "https://youtu.be/MVipgu0HLCE",
+      },
+      {
+        type: "code",
+        url: "https://github.com/Eirian-Ta/Movies",
+      },
+    ],
+  },
+  {
+    appCode: "weatherM",
+    title: "Weather iOS App",
+    tags: ["mobile-app", "iOS", "swift", "core-data"],
+    thumbnailFormat: "jpg",
+    desc: "The Weather iOS app empowers users to monitor weather conditions in their favorite cities. It utilizes Core Data to store and retrieve saved cities, which are displayed on the initial view controller for easy access and monitoring.",
+    urls: [
+      {
+        type: "demo-clip",
+        url: "https://youtube.com/shorts/qWLTPlNmHdk",
+      },
+      {
+        type: "code",
+        url: "https://github.com/Eirian-Ta/Weather/",
+      },
+    ],
+  },
+  {
+    appCode: "ticketM",
+    title: "Airplane Tickets iOS App",
+    tags: ["mobile-app", "iOS", "objective-c"],
+    thumbnailFormat: "jpg",
+    desc: "The Airplane Tickets iOS app facilitates users in adding various types of tickets to their cart, alongside the option to append a note and apply vouchers to their purchase.",
+    urls: [
+      {
+        type: "demo-clip",
+        url: "https://youtu.be/QVOBeXYSYLI",
+      },
+      {
+        type: "code",
+        url: "https://github.com/Eirian-Ta/AirplaneTickets",
+      },
+    ],
+  },
 ];
 
 export const tagsByGroup = [
-  { groupName: "Project Type", tags: ["website", "mobile-app", "game"] },
+  {
+    groupName: "Project Type",
+    tags: ["website", "mobile-app", "game", "android", "iOS"],
+  },
   {
     groupName: "Languages",
-    tags: ["javascript", "typeScript", "python", "java", "C#", "php", "liquid"],
+    tags: [
+      "javascript",
+      "typeScript",
+      "python",
+      "java",
+      "C#",
+      "pHP",
+      "swift",
+      "objective-c",
+      "liquid",
+    ],
   },
   {
     groupName: "Frameworks & Libraries",
     tags: [
-      "reactNative",
+      "react-native",
       "react",
       "redux",
       "angular",
@@ -561,7 +645,14 @@ export const tagsByGroup = [
   },
   {
     groupName: "Database",
-    tags: ["SQL", "postgreSQL", "mongoDB", "elasticsearch"],
+    tags: [
+      "SQL",
+      "postgreSQL",
+      "mongoDB",
+      "elasticsearch",
+      "room",
+      "core-data",
+    ],
   },
   { groupName: "Messaging Systems ", tags: ["rabbitMQ", "kafka"] },
   { groupName: "Testing", tags: ["jest", "selenium", "sonarQube"] },
@@ -578,6 +669,12 @@ export const tagsByGroup = [
   },
   {
     groupName: "Others",
-    tags: ["node.js", "RESTful API", "micro-frontend", "micro-service"],
+    tags: [
+      "node.js",
+      "RESTful API",
+      "micro-frontend",
+      "micro-service",
+      "retrofit",
+    ],
   },
 ];
