@@ -5,6 +5,7 @@ const realWorldProjectsData = [
     appCode: "dealsyW",
     title: "Dealsy Main Website",
     company: "Dealsy Limited",
+    date: new Date(2024, 1, 1),
     thumbnailFormat: "jpg",
     tags: [
       "website",
@@ -32,6 +33,7 @@ const realWorldProjectsData = [
     appCode: "dealsyA",
     title: "Dealsy Admin Website",
     company: "Dealsy Limited",
+    date: new Date(2024, 1, 1),
     thumbnailFormat: "jpg",
     tags: [
       "website",
@@ -58,6 +60,7 @@ const realWorldProjectsData = [
     appCode: "dealsyM",
     title: "Dealsy Mobile App",
     company: "Dealsy Limited",
+    date: new Date(2024, 1, 1),
     thumbnailFormat: "jpg",
     tags: [
       "mobile-app",
@@ -89,6 +92,7 @@ const realWorldProjectsData = [
     appCode: "helios",
     title: "Helios DevOps System",
     company: "RBC",
+    date: new Date(2023, 7, 1),
     thumbnailFormat: "",
     tags: [
       "devops",
@@ -131,6 +135,7 @@ const realWorldProjectsData = [
     appCode: "alW",
     title: "Alpha Labs Website",
     company: "Alpha Laboratories Inc.",
+    date: new Date(2022, 7, 1),
     thumbnailFormat: "jpg",
     tags: [
       "website",
@@ -172,6 +177,7 @@ const realWorldProjectsData = [
     appCode: "mozaikA",
     title: "Mozaik.Global iOS Mobile App",
     company: "MLD Solutions Inc.",
+    date: new Date(2019, 4, 1),
     thumbnailFormat: "gif",
     tags: [
       "mobile-app",
@@ -192,6 +198,7 @@ const realWorldProjectsData = [
     appCode: "pptW",
     title: "Planned Parenthood Toronto Website",
     company: "Planned Parenthood Toronto",
+    date: new Date(2019, 8, 1),
     thumbnailFormat: "jpg",
     tags: ["website", "wordpress", "pHP"],
     desc: "As a contractor for Planned Parenthood Toronto, I collaborated on developing a demonstration version for their website in 2018. The successful client approval led to securing sponsorship, transforming our demonstration into a fully functional website in 2019.",
@@ -208,6 +215,7 @@ const otherProjectsData = [
   {
     appCode: "blogW",
     title: "My Personal Blog",
+    date: new Date(2021, 10, 11),
     tags: ["website", "next.js", "react", "node.js", "tailwind", "typeScript"],
     thumbnailFormat: "jpg",
     desc: "Picture it as a cozy corner of the internet where I stash my personal musings in Vietnamese. The blog offers both light and dark modes, facilitated by React state management, giving you the option to switch between them.",
@@ -225,6 +233,7 @@ const otherProjectsData = [
   {
     appCode: "fragmentsS",
     title: "Fragments Microservice",
+    date: new Date(2022, 7, 14),
     tags: ["micro-service", "aws", "docker", "node.js", "javascript", "jest"],
     thumbnailFormat: "jpg",
     desc: `In this project, I've:
@@ -249,6 +258,7 @@ const otherProjectsData = [
   {
     appCode: "pongG",
     title: "Pong Game",
+    date: new Date(2018, 10, 5),
     tags: ["game", "javascript"],
     thumbnailFormat: "jpg",
     desc: "A simple ping pong game utilizing SVG rendering, coded in JavaScript, allowing two players to participate using the same keyboard.",
@@ -267,6 +277,7 @@ const otherProjectsData = [
     appCode: "pokemonM",
     title: "Pokemon Android App",
     tags: ["mobile-app", "android", "java"],
+    date: new Date(2022, 7, 1),
     thumbnailFormat: "jpg",
     desc: "The Android app is designed for Pokémon management, strictly adhering to specific guidelines. It employs the Singleton pattern to handle Pokémon data consistently across the application. View bindings are exclusively used, eliminating the need for data bindings or findViewById(). The ListView integrates a custom adapter extending ArrayAdapter, enabling efficient updates to each row's content within the adapter's getView() function.",
     urls: [
@@ -283,6 +294,7 @@ const otherProjectsData = [
   {
     appCode: "movieM",
     title: "Purchase Movie Ticket",
+    date: new Date(2022, 6, 1),
     tags: ["mobile-app", "android", "java", "room", "retrofit"],
     thumbnailFormat: "jpg",
     desc: "The Android app facilitates browsing and purchasing movie tickets, employing Fragments for screen creation. Navigation and data exchange between screens are managed via the Navigation Component library and nav_graph. Data persistence is ensured through the Room database, while API interactions are handled using the Retrofit client with GSON parser. Images are downloaded and displayed using the Glide library, enhancing the user experience.",
@@ -300,6 +312,7 @@ const otherProjectsData = [
   {
     appCode: "weatherM",
     title: "Weather iOS App",
+    date: new Date(2022, 5, 1),
     tags: ["mobile-app", "iOS", "swift", "core-data"],
     thumbnailFormat: "jpg",
     desc: "The Weather iOS app empowers users to monitor weather conditions in their favorite cities. It utilizes Core Data to store and retrieve saved cities, which are displayed on the initial view controller for easy access and monitoring.",
@@ -317,6 +330,7 @@ const otherProjectsData = [
   {
     appCode: "ticketM",
     title: "Airplane Tickets iOS App",
+    date: new Date(2022, 4, 1),
     tags: ["mobile-app", "iOS", "objective-c"],
     thumbnailFormat: "jpg",
     desc: "The Airplane Tickets iOS app facilitates users in adding various types of tickets to their cart, alongside the option to append a note and apply vouchers to their purchase.",

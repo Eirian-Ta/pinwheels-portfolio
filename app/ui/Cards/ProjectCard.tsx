@@ -42,7 +42,7 @@ const ExperienceCard: React.FC<ProjectCardProps> = (props) => {
         </p>
       )}
       <div>
-        {urls.length > 0 ? (
+        {urls.length > 0 && urls[0].type ? (
           <div className="flex justify-between items-center">
             {urls.map((url) => (
               <a

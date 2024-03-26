@@ -219,6 +219,7 @@ async function seedProjects(client) {
     company VARCHAR(255),
     thumbnail_format VARCHAR(20) NOT NULL,
     description VARCHAR(1000) NOT NULL,
+    date DATE NOT NULL,
     type INT NOT NULL
   );
 `;
@@ -227,16 +228,16 @@ async function seedProjects(client) {
 
     const realWorldInsertions = realWorldProjectsData.map(
       (project) => client.sql`
-    INSERT INTO projects (app_code, title, company, thumbnail_format, description, type)
-    VALUES (${project.appCode}, ${project.title}, ${project.company}, ${project.thumbnailFormat}, ${project.desc}, ${1})
+    INSERT INTO projects (app_code, title, company, thumbnail_format, description, date, type)
+    VALUES (${project.appCode}, ${project.title}, ${project.company}, ${project.thumbnailFormat}, ${project.desc},${project.date}, ${1})
     ON CONFLICT (app_code) DO NOTHING;
   `
     );
 
     const otherProjectsInsertions = otherProjectsData.map(
       (project) => client.sql`
-    INSERT INTO projects (app_code, title, thumbnail_format, description, type)
-    VALUES (${project.appCode}, ${project.title}, ${project.thumbnailFormat}, ${project.desc}, ${2})
+    INSERT INTO projects (app_code, title, thumbnail_format, description, date, type)
+    VALUES (${project.appCode}, ${project.title}, ${project.thumbnailFormat}, ${project.desc},${project.date}, ${2})
     ON CONFLICT (app_code) DO NOTHING;
   `
     );
