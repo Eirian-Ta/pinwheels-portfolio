@@ -3,7 +3,7 @@ import ProfileImage from "../ui/About/ProfileImage";
 import { permanent_marker } from "../ui/fonts";
 import styles from "@/app/ui/about.module.css";
 import Footer from "../ui/Footer/Footer";
-import { aboutData } from "@/app/lib/placeholder-data";
+import { aboutData } from "@/app/lib/static-data";
 
 export default function Page() {
   return (

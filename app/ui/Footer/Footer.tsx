@@ -1,5 +1,5 @@
 import React from "react";
-import { allSocialContactLinks } from "@/app/lib/placeholder-data";
+import { allSocialContactLinks } from "@/app/lib/static-data";
 
 export default function Footer() {
   return (

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import TopNav from "./ui/HeadNav/TopNav";
-import { socialLinks, resumeData } from "./lib/placeholder-data";
+import { socialLinks, resumeData } from "./lib/static-data";
 import styles from "@/app/ui/home.module.css";
 
 export default function Home() {

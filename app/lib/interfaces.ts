@@ -1,3 +1,5 @@
+import { TagGroup } from "./types";
+
 interface ContentItem {
   key: string;
   achieve: string;
@@ -28,9 +30,16 @@ export interface ProjectCardProps {
   tags: string[];
   desc: string;
   urls: URLItem[];
+  type?: number;
 }
 
 export interface ShowMoreBtnProps {
   isShowingMore: boolean;
   setIsShowingMore: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface ProjectsSkeletonProps {
+  tagsByGroup: TagGroup[];
+  realWorldProjectsData: ProjectCardProps[];
+  otherProjectsData: ProjectCardProps[];
 }

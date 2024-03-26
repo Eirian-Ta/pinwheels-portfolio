@@ -3,7 +3,7 @@ import { permanent_marker } from "../ui/fonts";
 import styles from "@/app/ui/contact.module.css";
 import Footer from "../ui/Footer/Footer";
 import { LocationIconBold } from "../ui/Icons";
-import { contact, contactLinks } from "../lib/placeholder-data";
+import { contact, contactLinks } from "../lib/static-data";
 import ContactFrom from "../ui/Contact/ContactForm";
 
 export default function Page() {
