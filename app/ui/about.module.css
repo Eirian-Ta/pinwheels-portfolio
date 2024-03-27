@@ -50,6 +50,7 @@
 .techSkills {
   list-style: unset;
   text-align: left;
+  padding: revert !important;
 }
 
 @keyframes bounceInDown {

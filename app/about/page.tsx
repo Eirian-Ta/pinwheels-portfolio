@@ -70,17 +70,17 @@ export default function Page() {
             </div>
           </section>
           <section
-            className={`${styles.stackContainer} flex justify-evenly flex-wrap m-8 p-5`}
+            className={`${styles.stackContainer} flex justify-evenly flex-wrap m-3 p-2 md:m-8 md:p-5`}
           >
             <h2
               className={`m-3 text-3xl ${permanent_marker.className} antialiased`}
             >
               {aboutData.techStackTitle}
             </h2>
-            <ul className={`${styles.techSkills}`}>
+            <ul className={`${styles.techSkills} mr-4`}>
               {aboutData.techStack.map((skillSet) => (
                 <li key={skillSet.key}>
-                  <span className="font-bold">{skillSet.title}</span>{" "}
+                  <span className="font-bold">{skillSet.title}:</span>{" "}
                   {skillSet.skills}
                 </li>
               ))}
