@@ -4,7 +4,7 @@ import { sql } from "@vercel/postgres";
 import { TagGroup } from "./types";
 import { ProjectCardProps } from "./interfaces";
 import { categorizeProjects } from "./utils";
-const util = require("util");
+// const util = require("util");
 
 export async function fetchTagsInGroups() {
   try {
@@ -68,9 +68,9 @@ export async function fetchProjectsInTypes() {
 
   `;
     const result = categorizeProjects(data.rows);
-    data.rows.map((obj) =>
-      console.log(util.inspect(obj, { showHidden: false, depth: null }))
-    );
+    // data.rows.map((obj) =>
+    //   console.log(util.inspect(obj, { showHidden: false, depth: null }))
+    // );
     // console.log(result);
     return result;
     // return {

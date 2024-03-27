@@ -41,20 +41,25 @@
   border-radius: 10px;
 }
 
+.tagGroup .tag {
+  cursor: pointer;
+}
+
 .tag {
   background: var(--button-bg);
   color: var(--button-fg);
   /* font-size: 0.6rem; */
 }
 
-.tagGroup .tag:hover {
-  color: var(--button-bg);
-  background: var(--button-fg);
-  box-shadow:
-    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
-    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
-  /* transform: scale(1.2); */
-  cursor: pointer;
+@media (min-width: 1024px) {
+  .tagGroup .tag:hover {
+    color: var(--button-bg);
+    background: var(--button-fg);
+    box-shadow:
+      inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+      inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    /* transform: scale(1.2); */
+  }
 }
 
 .chosenTag {
