@@ -2,10 +2,14 @@
 }
 
 .projectCard {
+  max-height: min(600px, 100vh);
   border-radius: 10px;
   box-shadow:
     -10px -10px 15px rgba(255, 255, 255, 0.5),
     10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.projectCard > div {
+  margin-top: 0.5rem;
 }
 
 .projectCard:hover {
@@ -15,6 +19,10 @@
     inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
+.projectCard:hover .projDesc {
+  scrollbar-color: var(--button-bg) var(--bg2);
+}
+
 .projectCard p {
   margin: 5px 0px;
 }
@@ -22,6 +30,10 @@
   margin: 10px 0px;
   max-height: 180px;
   object-fit: contain;
+}
+.projDesc {
+  scrollbar-width: thin;
+  scrollbar-color: var(--button-bg) var(--bg);
 }
 
 .tagGroup {

@@ -17,7 +17,9 @@ const ExperienceCard: React.FC<ProjectCardProps> = (props) => {
   const [isShowingMore, setIsShowingMore] = useState(false);
 
   return (
-    <div className={`${styles.projectCard} text-left p-5 relative`}>
+    <div
+      className={`${styles.projectCard} text-left p-5 relative flex flex-col`}
+    >
       <h3 className="font-bold text-lg">{title}</h3>
       {company && <h4 className="italic">{company}</h4>}
       {thumbnailFormat ? (
@@ -71,13 +73,11 @@ const ExperienceCard: React.FC<ProjectCardProps> = (props) => {
           </span>
         ))}
       </div>
-      <ShowMoreBtn
-        isShowingMore={isShowingMore}
-        setIsShowingMore={setIsShowingMore}
-      />
-      {isShowingMore
-        ? descArray.map((item, index) => <p key={"desc" + index}>{item}</p>)
-        : null}
+      <div className={`${styles.projDesc} overflow-y-auto`}>
+        {descArray.map((item, index) => (
+          <p key={"desc" + index}>{item}</p>
+        ))}
+      </div>
     </div>
   );
 };

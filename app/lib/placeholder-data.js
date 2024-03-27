@@ -163,6 +163,7 @@ const realWorldProjectsData = [
     appCode: "rqW",
     title: "Rotorquest E-commerce Website",
     company: "RotorQuest Inc.",
+    date: new Date(2021, 11, 1),
     thumbnailFormat: "jpg",
     tags: ["website", "bigCommerce", "javascript", "shopify", "liquid"],
     desc: "In 2021, I spearheaded a business transformation for RotorQuest Inc., launching a comprehensive e-commerce system implementing BigCommerce. The strategic optimization of content, speed, and UX/UI design elements resulted in a 40% improvement in website traffic, earning the CEO's satisfaction. Two years later, the CEO entrusted me with migrating the website to Shopify in alignment with evolving business strategies.",
