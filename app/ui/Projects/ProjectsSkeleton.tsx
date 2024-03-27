@@ -77,7 +77,7 @@ export default function ProjectsSkeleton({
             ))}
           </div>
         </section>
-        <section className="m-5 p-2 md:m-8 p-5">
+        <section className="m-3 p-2 md:ml-8 md:my-8 md:p-5">
           <h2
             className={`m-3 text-3xl ${permanent_marker.className} antialiased`}
           >
