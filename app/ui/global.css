@@ -176,6 +176,10 @@ a {
   text-decoration: none;
 }
 
+a span {
+  word-break: auto-phrase;
+}
+
 .topNav {
   z-index: 9999;
 }

@@ -28,7 +28,7 @@ export default function Page() {
                 <li key={l.name} className="m-1">
                   <a href={l.url} className="flex">
                     {l.iconBold}
-                    {l.text}
+                    <span>{l.text}</span>
                   </a>
                 </li>
               ))}

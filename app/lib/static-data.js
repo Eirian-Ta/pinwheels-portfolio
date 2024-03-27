@@ -66,7 +66,7 @@ const github = {
   icon: <GitHubIconLight />,
   iconBold: <GitHubIconBlackBoldSquare />,
   url: "https://github.com/Eirian-Ta",
-  text: "https://github.com/Eirian-Ta",
+  text: "github.com/Eirian-Ta",
 };
 
 const linkedIn = {
@@ -74,7 +74,7 @@ const linkedIn = {
   icon: <LinkedInIconLight />,
   iconBold: <LinkedInIconBlack />,
   url: "https://www.linkedin.com/in/eirian-ta/",
-  text: "https://www.linkedin.com/in/eirian-ta/",
+  text: "www.linkedin.com/in/eirian-ta/",
 };
 
 const deviantArt = {
@@ -82,7 +82,7 @@ const deviantArt = {
   icon: <DeviantArtIconLight />,
   iconBold: "",
   url: "https://www.deviantart.com/white-chan",
-  text: "https://www.deviantart.com/white-chan",
+  text: "www.deviantart.com/white-chan",
 };
 
 const gMail = {
