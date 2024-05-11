@@ -119,6 +119,10 @@
   animation-name: floatLeftToRight;
 }
 
+.leftCloud ul {
+  padding-top: 5rem;
+}
+
 .rightCloud {
   width: 150px;
   height: 80px;
