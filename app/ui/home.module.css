@@ -42,8 +42,9 @@
 }
 
 .leftPinwheel {
-  width: 60%;
+  display: block;
   aspect-ratio: 1;
+  height: 60%;
   background: var(--pinwheel-bg);
   top: 0;
   transform: translate(48%, 20%);
