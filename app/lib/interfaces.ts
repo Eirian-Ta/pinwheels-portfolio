@@ -45,6 +45,6 @@ export interface ProjectsSkeletonProps {
 }
 
 export interface CurrentThemeProps {
-  currentTheme: string;
+  currentTheme?: string;
   setCurrentTheme: React.Dispatch<React.SetStateAction<string>>;
 }

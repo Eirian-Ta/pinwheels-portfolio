@@ -5,10 +5,7 @@ import { HomeIcon } from "../Icons";
 import BackToTopBtn from "./BackToTopBtn";
 import { CurrentThemeProps } from "@/app/lib/interfaces";
 
-export default function TopNav({
-  currentTheme,
-  setCurrentTheme,
-}: CurrentThemeProps) {
+export default function TopNav({ setCurrentTheme }: CurrentThemeProps) {
   return (
     <div className="topNav absolute top-0 left-0 w-screen">
       <a

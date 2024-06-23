@@ -5,12 +5,16 @@ import Footer from "../ui/Footer/Footer";
 import { LocationIconBold } from "../ui/Icons";
 import { contact, contactLinks } from "../lib/static-data";
 import ContactFrom from "../ui/Contact/ContactForm";
+import { CurrentThemeProps } from "../lib/interfaces";
 
-export default function Page() {
+export default function Page({
+  currentTheme,
+  setCurrentTheme,
+}: CurrentThemeProps) {
   return (
     <>
       <header>
-        <TopNav />
+        <TopNav currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
       </header>
       <div>
         <main className="flex flex-wrap justify-between">

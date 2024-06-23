@@ -2,12 +2,16 @@ import TopNav from "../ui/HeadNav/TopNav";
 import Footer from "../ui/Footer/Footer";
 import ExperienceCard from "../ui/Cards/ExperienceCard";
 import { experienceData } from "../lib/static-data";
+import { CurrentThemeProps } from "../lib/interfaces";
 
-export default function Page() {
+export default function Page({
+  currentTheme,
+  setCurrentTheme,
+}: CurrentThemeProps) {
   return (
     <>
       <header>
-        <TopNav />
+        <TopNav currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
       </header>
       <div>
         <main className="flex flex-col items-center">
