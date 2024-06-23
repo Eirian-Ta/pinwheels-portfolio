@@ -43,3 +43,8 @@ export interface ProjectsSkeletonProps {
   realWorldProjectsData: ProjectCardProps[];
   otherProjectsData: ProjectCardProps[];
 }
+
+export interface CurrentThemeProps {
+  currentTheme: string;
+  setCurrentTheme: React.Dispatch<React.SetStateAction<string>>;
+}

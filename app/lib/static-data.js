@@ -12,6 +12,16 @@ import {
 const AWS_ASSETS_URL =
   "https://pinwheels-portfolio-eirian.s3.ca-central-1.amazonaws.com/";
 
+export const imageUrlsPlaceHolder = [
+  "0$theme_Bg.jpg",
+  "0$theme_Big_tree.png",
+  "0$theme_Small_tree.png",
+  "0$theme_Cloud1.png",
+  "0$theme_Cloud2.png",
+  "0$theme_Cloud3.png",
+  "0$theme_Pinwheel.png",
+];
+
 export const aboutData = {
   avatarCartoonUrl: "",
   avatarUrl: "",

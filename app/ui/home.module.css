@@ -6,6 +6,21 @@
   background-size: cover;
 }
 
+.landscapeError {
+  position: fixed;
+  font-size: 2rem;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
 .landscape {
   background-position: bottom left !important;
   background-size: contain !important;
@@ -38,7 +53,7 @@
   display: block;
   background: var(--main-tree-bg);
   right: 0;
-  animation-delay: 1s;
+  animation-delay: 1;
 }
 
 .leftPinwheel {

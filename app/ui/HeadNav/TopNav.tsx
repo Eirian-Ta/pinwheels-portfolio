@@ -3,8 +3,12 @@ import ThemeSelection from "./ThemeSelection";
 import { permanent_marker } from "../fonts";
 import { HomeIcon } from "../Icons";
 import BackToTopBtn from "./BackToTopBtn";
+import { CurrentThemeProps } from "@/app/lib/interfaces";
 
-export default function TopNav() {
+export default function TopNav({
+  currentTheme,
+  setCurrentTheme,
+}: CurrentThemeProps) {
   return (
     <div className="topNav absolute top-0 left-0 w-screen">
       <a
@@ -20,7 +24,7 @@ export default function TopNav() {
       </a>
 
       <div className="flex justify-between items-end flex-warp flex-col-reverse mr-1 md:flex-row lg:flex-row md:flex-start lg:flex-start md:items-start lg:items-start">
-        <ThemeSelection />
+        <ThemeSelection setCurrentTheme={setCurrentTheme} />
         <Menu />
       </div>
 
