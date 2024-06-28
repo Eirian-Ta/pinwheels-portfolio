@@ -1,20 +1,16 @@
-import TopNav from "../ui/HeadNav/TopNav";
 import { permanent_marker } from "../ui/fonts";
 import styles from "@/app/ui/contact.module.css";
 import Footer from "../ui/Footer/Footer";
 import { LocationIconBold } from "../ui/Icons";
 import { contact, contactLinks } from "../lib/static-data";
 import ContactFrom from "../ui/Contact/ContactForm";
-import { CurrentThemeProps } from "../lib/interfaces";
+import TopNavWrapper from "../ui/HeadNav/TopNavWrapper";
 
-export default function Page({
-  currentTheme,
-  setCurrentTheme,
-}: CurrentThemeProps) {
+export default function Page() {
   return (
     <>
       <header>
-        <TopNav currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
+        <TopNavWrapper />
       </header>
       <div>
         <main className="flex flex-wrap justify-between">
